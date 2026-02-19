@@ -11,3 +11,4 @@ data/*.csv
 data/processed/*.csv
 data/raw/*.csv
 notebooks/_executed_/*.ipynb
+outputs/

@@ -1,6 +1,9 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
+from src.features.builder import FeatureBuilder
+
+
 class DataCleaner:
     def clean(self, df, target):
         df = df.copy()
@@ -38,4 +41,5 @@ class DataCleaner:
 
         X = X.astype(float)
 
-        return X.values, y, X.columns.tolist()
+        X_arr, feature_names = FeatureBuilder().build(X.values, X.columns.tolist())
+        return X_arr, y, feature_names
