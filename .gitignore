@@ -1,0 +1,13 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data files
+data/*.csv
+data/processed/*.csv
+data/raw/*.csv
+notebooks/_executed_/*.ipynb
