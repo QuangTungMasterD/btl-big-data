@@ -1,0 +1,28 @@
+seed: 42
+
+paths:
+  raw_data: data/raw/HR_Analytics.csv
+  processed_data: data/processed/cleaned.csv
+
+target: Attrition
+
+test_size: 0.2
+
+clustering:
+  n_clusters: 4
+
+model:
+  random_forest:
+    n_estimators: 100
+    max_depth: 5
+    min_samples_split: 2
+    min_samples_leaf: 1
+
+  xgboost:
+    n_estimators: 200
+    max_depth: 4
+    learning_rate: 0.1
+
+association:
+  min_support: 0.05
+  min_confidence: 0.6
